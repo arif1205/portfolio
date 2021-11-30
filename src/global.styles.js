@@ -51,3 +51,38 @@ export const Button = styled.button`
 		color: #fff;
 	}
 `;
+
+export const SectionTitle = styled.h1`
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	position: relative;
+	margin-bottom: 10px;
+	color: #797979;
+	font-size: 14px;
+	line-height: 27px;
+	width: max-content;
+	margin: auto;
+	text-align: center;
+	position: relative;
+	margin-bottom: 50px;
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100px;
+		height: 1px;
+		background: #797979;
+	}
+
+	&:before {
+		left: -130%;
+	}
+
+	&:after {
+		right: -130%;
+	}
+`;
