@@ -86,3 +86,12 @@ export const SectionTitle = styled.h1`
 		right: -130%;
 	}
 `;
+
+export const Load = styled.div`
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
