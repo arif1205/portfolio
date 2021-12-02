@@ -6,6 +6,7 @@ import About from "./About";
 import ReactLoading from "react-loading";
 import Projects from "./Projects";
 import { Load } from "../../global.styles";
+import Footer from "../../Components/Footer";
 
 const Home = () => {
 	const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ const Home = () => {
 			<Banner />
 			<About />
 			<Projects />
+			<Footer />
 		</>
 	);
 };
