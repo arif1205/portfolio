@@ -232,8 +232,8 @@ export const projects: Project[] = [
 
 // Giscus (GitHub Discussions) settings for the guestbook; these IDs are public, not secrets.
 export const giscus = {
-  repo: '' as `${string}/${string}` | '',
-  repoId: '',
-  category: 'Guestbook',
-  categoryId: '',
+  repo: 'arif1205/portfolio' as `${string}/${string}` | '',
+  repoId: 'R_kgDOVcQ0Wg',
+  category: 'Announcements',
+  categoryId: 'DIC_kwDOVcQ0Ws4DJ8om',
 };
