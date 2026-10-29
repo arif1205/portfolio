@@ -1,0 +1,122 @@
+import type { CSSProperties } from 'react';
+import Image from 'next/image';
+import { SiDiscord, SiGithub } from '@icons-pack/react-simple-icons';
+import { IconFolder, IconMsgs, IconPaperPlane, IconSuitcase, IconUsers } from 'nucleo-glass';
+
+import { Arrow, BeamButton } from '@/components/button';
+import { Divider } from '@/components/divider';
+import { HeroVisual } from '@/components/hero-visual';
+import { LinkedInIcon, MailIcon } from '@/components/icons/brand';
+import { PageMarker } from '@/components/page-marker';
+import { ProjectCard } from '@/components/project-card';
+import { Section } from '@/components/section';
+import { TimelineList } from '@/components/timeline-list';
+import { experience, involvements, profile, projects } from '@/lib/data';
+
+const socialLinks = [
+  { href: profile.socials.discord, label: 'Discord', icon: SiDiscord },
+  { href: profile.socials.github, label: 'GitHub', icon: SiGithub },
+  { href: profile.socials.linkedin, label: 'LinkedIn', icon: LinkedInIcon },
+  { href: `mailto:${profile.email}`, label: 'Email', icon: MailIcon },
+];
+
+export default function Home() {
+  return (
+    <>
+      <section className="relative flex justify-between py-18">
+        <div className="relative">
+          <PageMarker />
+          <div className="enter-animation max-w-100">
+            <hgroup>
+              <h1 className="text-[1.375rem]/5 font-semibold tracking-tighter">{profile.name}</h1>
+              <p className="text-muted-foreground/70 mt-1.5 mb-3.5 leading-4 font-medium tracking-tight">
+                {profile.tagline}
+              </p>
+            </hgroup>
+            <p className="text-muted-foreground mb-4 text-sm/5 text-pretty">
+              Full-time developer with a knack for building software. Currently studying{' '}
+              <strong className="text-foreground/60 tracking-narrow font-medium">{profile.role}</strong>{' '}
+              <span className="mr-0.5">@</span>{' '}
+              <a href={profile.organization.href} target="_blank" rel="noreferrer" className="inline-flex items-baseline gap-1.25 whitespace-nowrap">
+                <Image
+                  src={profile.organization.logo}
+                  alt=""
+                  width={16}
+                  height={16}
+                  priority
+                  className="mt-px self-center rounded border border-white/50 object-contain dark:border-white/10"
+                />
+                <strong className="text-foreground/60 tracking-narrow font-medium">{profile.organization.name}</strong>
+              </a>
+              .
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target={href.startsWith('mailto:') ? '_self' : '_blank'}
+                  rel="noreferrer"
+                  className="relative transition-opacity after:absolute after:-inset-x-2 after:inset-y-0 after:content-[''] hover:opacity-80"
+                >
+                  <Icon className="size-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+        <HeroVisual />
+      </section>
+      <Divider />
+      <Section id="experience" title="Experience" icon={IconSuitcase} delay={200}>
+        <TimelineList entries={experience} />
+      </Section>
+      <Divider />
+      <Section id="involvements" title="Involvements" icon={IconUsers} delay={400}>
+        <TimelineList entries={involvements} />
+      </Section>
+      <Divider />
+      <Section
+        id="projects"
+        title="Projects"
+        icon={IconFolder}
+        delay={600}
+        action={
+          <BeamButton href="/projects" variant="secondary" beamStrength={0.5}>
+            View more
+            <Arrow className="opacity-80" />
+          </BeamButton>
+        }
+      >
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {projects
+            .filter((project) => project.featured)
+            .map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+        </div>
+      </Section>
+      <Divider />
+      <section
+        className="enter-animation grid gap-4 py-14 text-center"
+        style={{ '--enter-delay': '800ms' } as CSSProperties}
+      >
+        <h2 className="mx-auto flex flex-col text-[1.375rem]/5 font-semibold tracking-tighter [&>span>svg]:drop-shadow [&>span>svg]:drop-shadow-black/15 dark:[&>span>svg]:drop-shadow-none">
+          <span className="mx-auto flex items-center gap-2.5 pr-3.5">
+            <IconMsgs uniqueId="cta-msgs" />
+            Want to chat?
+          </span>
+          <span className="flex items-center gap-2.5">
+            Shoot me an email!
+            <IconPaperPlane uniqueId="cta-plane" />
+          </span>
+        </h2>
+        <BeamButton href={`mailto:${profile.email}`} variant="primary" beamStrength={1} className="mx-auto">
+          Get in touch
+          <Arrow className="-mr-0.5" />
+        </BeamButton>
+      </section>
+    </>
+  );
+}

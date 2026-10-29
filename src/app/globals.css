@@ -1,0 +1,223 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
+
+@theme inline {
+  --font-sans:
+    var(--font-open-runde), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin-inline: calc(var(--spacing) * 3);
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Keeps the centered card from shifting when a page gains a scrollbar. */
+  @media (min-width: 832px) {
+    body {
+      margin-right: calc(100% - 100vw);
+    }
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup {
+    text-transform: lowercase;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  :is(a, button):focus-visible {
+    @apply rounded-xs outline-2 outline-offset-2 outline-blue-500;
+  }
+}
+
+@utility container-layout {
+  width: 100%;
+  max-width: calc(var(--spacing) * 188.5);
+  padding-inline: calc(var(--spacing) * 4);
+  margin-inline: auto;
+}
+
+@utility tracking-narrow {
+  letter-spacing: -0.0125em;
+}
+
+.enter-animation {
+  animation: enter-animation 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--enter-delay, 0s) both;
+}
+
+@keyframes enter-animation {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* Slowly rotating highlight around call-to-action buttons. */
+@property --beam-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+.beam {
+  position: relative;
+  isolation: isolate;
+  border-radius: var(--radius-md);
+  animation: beam-spin 1.96s linear infinite;
+}
+
+.beam::before,
+.beam::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.beam::before {
+  inset: -1px;
+  z-index: -1;
+  background: conic-gradient(from var(--beam-angle), #f472b6, #a78bfa, #60a5fa, #34d399, #fbbf24, #f472b6);
+  filter: blur(5px);
+  opacity: calc(0.18 * var(--beam-strength, 1));
+}
+
+.beam::after {
+  inset: 0;
+  z-index: 2;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--beam-angle),
+    transparent 0% 54%,
+    rgb(255 255 255 / 0.3) 60%,
+    rgb(255 255 255 / 0.75) 66%,
+    rgb(255 255 255 / 0.3) 72%,
+    transparent 78% 100%
+  );
+  mask:
+    linear-gradient(#fff 0 0) content-box exclude,
+    linear-gradient(#fff 0 0);
+  opacity: calc(0.5 * var(--beam-strength, 1));
+}
+
+@keyframes beam-spin {
+  to {
+    --beam-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter-animation,
+  .beam {
+    animation: none;
+  }
+}
+
+giscus-widget {
+  display: block;
+  padding-block: calc(var(--spacing) * 4);
+}
