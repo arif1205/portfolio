@@ -2,6 +2,8 @@
 
 Personal portfolio built with Next.js 16, Tailwind CSS v4 and Motion.
 
+**Live:** https://mdarifulislam.vercel.app
+
 Design inspired by [aelew.com](https://aelew.com) by Andre Lew. This is an independent rebuild with my own content.
 
 ## Develop

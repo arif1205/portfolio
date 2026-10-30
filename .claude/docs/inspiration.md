@@ -57,6 +57,12 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
 - **2026-02-28**: First attempt pasted aelew.com's rendered DOM into a Next.js app. The source was later forgotten, then rediscovered through Cursor's local history (`aria-label='aelew'`).
 - **2026-10-30**: Tried the archived `aelew/com` Astro repo, then dropped it for this from-scratch rebuild. The rebuild was verified with side-by-side screenshots of every page at 390/768/1440px in dark and light themes, plus the mobile drawer.
 
+## Deployment
+
+- Vercel project `arif-dev` in the `arif1205s-projects` team, connected to `arif1205/portfolio` (every push to `main` deploys to production).
+- Live at https://mdarifulislam.vercel.app (`arif-dev.vercel.app` belongs to someone else; Vercel's fallback `arif-dev-blond.vercel.app` also still works).
+- `.vercel/` and the CLI-created `.env.local` (Vercel OIDC token) are gitignored.
+
 ## Licensing rules
 
 - Keep `THIRD_PARTY_NOTICES.md` and `src/app/fonts/OpenRunde-LICENSE.txt` in the repo.
