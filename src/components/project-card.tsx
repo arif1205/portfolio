@@ -18,7 +18,7 @@ export function ProjectCard({ project, headingLevel: Heading = 'h3' }: { project
         style={{ '--active-scale': project.hoverScale ?? 1.05, objectPosition: project.coverPosition } as CSSProperties}
       />
       {/* Posters often carry their own headlines; a heavy bottom scrim keeps the card's title legible. */}
-      <div className="pointer-events-none absolute size-full bg-linear-to-b from-black/10 via-black/60 via-45% to-black/95" />
+      <div className="pointer-events-none absolute size-full bg-linear-to-b from-black/25 via-black/70 via-40% to-black/95" />
       <div className="absolute bottom-0 left-0 w-full">
         <div className="flex w-full flex-col items-start gap-px px-4 py-3 text-zinc-100 drop-shadow drop-shadow-black/25">
           <div className="flex w-full justify-between">
