@@ -19,7 +19,7 @@ export default function ResumePage() {
       <Divider />
       <div className="enter-animation grid gap-4 py-4" style={{ '--enter-delay': '200ms' } as CSSProperties}>
         <div className="flex flex-wrap items-center gap-3">
-          <BeamButton href={resume.href} download={resume.fileName} variant="primary" beamStrength={1}>
+          <BeamButton href={resume.href} download={resume.fileName} variant="secondary" beamStrength={0.5} size="md">
             Download PDF
             <span aria-hidden="true">↓</span>
           </BeamButton>

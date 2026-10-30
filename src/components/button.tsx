@@ -9,13 +9,19 @@ const base =
 const variants = {
   primary:
     'bg-primary text-primary-foreground hover:bg-primary/80 dark:hover:bg-primary/90 h-9 px-4 py-2 text-sm shadow-md shadow-black/25 dark:shadow-none',
-  secondary:
-    'text-muted-foreground/90 bg-secondary/75 hover:bg-secondary border-foreground/5 h-7 border px-3 text-xs',
+  secondary: 'text-muted-foreground/90 bg-secondary/75 hover:bg-secondary border-foreground/5 border',
+};
+
+const sizes = {
+  sm: 'h-7 px-3 text-xs',
+  md: 'h-8 px-3.5 text-sm',
 };
 
 type BeamButtonProps = {
   href: string;
   variant: keyof typeof variants;
+  // Only applies to the secondary variant; primary has a fixed size.
+  size?: keyof typeof sizes;
   // Saves the file under this name instead of navigating to it.
   download?: string;
   beamStrength: number;
@@ -23,9 +29,9 @@ type BeamButtonProps = {
   children: ReactNode;
 };
 
-export function BeamButton({ href, variant, beamStrength, download, className, children }: BeamButtonProps) {
+export function BeamButton({ href, variant, beamStrength, size = 'sm', download, className, children }: BeamButtonProps) {
   const external = !href.startsWith('/') || download !== undefined;
-  const classes = cn(base, variants[variant]);
+  const classes = cn(base, variants[variant], variant === 'secondary' && sizes[size]);
   return (
     <div className={cn('beam', className)} style={{ '--beam-strength': beamStrength } as CSSProperties}>
       {external ? (
