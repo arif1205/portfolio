@@ -2,7 +2,7 @@
 
 Personal portfolio built with Next.js 16, Tailwind CSS v4 and Motion.
 
-Design inspired by [aelew.com](https://aelew.com) by Andre Lew. This is an independent rebuild; all content and imagery here are placeholders.
+Design inspired by [aelew.com](https://aelew.com) by Andre Lew. This is an independent rebuild with my own content.
 
 ## Develop
 
