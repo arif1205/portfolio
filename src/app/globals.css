@@ -133,8 +133,9 @@
   letter-spacing: -0.0125em;
 }
 
+/* `backwards`, not `both`: holding blur(0) after the animation keeps a filter layer that mobile Safari can leave blurry. */
 .enter-animation {
-  animation: enter-animation 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--enter-delay, 0s) both;
+  animation: enter-animation 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--enter-delay, 0s) backwards;
 }
 
 @keyframes enter-animation {
@@ -145,8 +146,8 @@
   }
   to {
     opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
+    filter: none;
+    transform: none;
   }
 }
 
