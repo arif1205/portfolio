@@ -4,6 +4,7 @@ import {
   SiDrizzle,
   SiExpress,
   SiFastify,
+  SiMariadb,
   SiGooglemaps,
   SiNestjs,
   SiNextdotjs,
@@ -33,6 +34,7 @@ import customerInsights from '@/assets/img/projects/customer-insights.png';
 import duplicateFinder from '@/assets/img/projects/duplicate-finder.png';
 import easyCourierBd from '@/assets/img/projects/easy-courier-bd.png';
 import elora from '@/assets/img/projects/elora.png';
+import esign from '@/assets/img/projects/esign.png';
 import mysust from '@/assets/img/projects/mysust.png';
 import pocketcarer from '@/assets/img/projects/pocketcarer.png';
 import wishsupport from '@/assets/img/projects/wishsupport.png';
@@ -191,6 +193,13 @@ export const projects: Project[] = [
     href: 'https://services.student.sust.edu',
     cover: mysust,
     stack: [SiNextdotjs, SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiPrisma],
+  },
+  {
+    name: 'eSign',
+    description: 'Academic approvals',
+    href: 'https://admin.student.sust.edu',
+    cover: esign,
+    stack: [SiNextdotjs, SiRedux, SiTailwindcss, SiExpress, SiPrisma, SiMariadb],
   },
   {
     name: 'PocketCarer',
