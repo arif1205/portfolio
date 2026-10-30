@@ -1,9 +1,10 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { SiGithub } from '@icons-pack/react-simple-icons';
+import { SiDiscord, SiGithub } from '@icons-pack/react-simple-icons';
 import { IconAwardCertificate, IconBadgeSparkle, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } from 'nucleo-glass';
 
 import { Arrow, BeamButton } from '@/components/button';
+import { CopyHandle } from '@/components/copy-handle';
 import { Divider } from '@/components/divider';
 import { TorusKnot } from '@/components/torus-knot';
 import { LinkedInIcon, MailIcon } from '@/components/icons/brand';
@@ -55,6 +56,9 @@ export default function Home() {
               .
             </p>
             <div className="flex flex-wrap items-center gap-4">
+              <CopyHandle handle={profile.socials.discord} label="Discord">
+                <SiDiscord className="size-5" />
+              </CopyHandle>
               {socialLinks.map(({ href, label, icon: Icon }) => (
                 <a
                   key={label}
