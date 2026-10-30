@@ -62,6 +62,11 @@ export const profile = {
   degree: 'Computer Science',
   university: { name: 'SUST', href: 'https://www.sust.edu', logo: sustLogo },
   email: 'imdariful71@gmail.com',
+  resume: {
+    href: '/static/files/md-ariful-islam-resume.pdf',
+    fileName: 'Md-Ariful-Islam-Resume.pdf',
+    updated: 'Oct 2026',
+  },
   copyrightYear: 2026,
   socials: {
     discord: 'https://discord.com/users/849591438576713728',
@@ -252,11 +257,3 @@ export const projects: Project[] = [
     stack: [SiReact, SiShopify, SiExpress, SiPrisma, SiMysql],
   },
 ];
-
-// Giscus (GitHub Discussions) settings for the guestbook; these IDs are public, not secrets.
-export const giscus = {
-  repo: 'arif1205/portfolio' as `${string}/${string}` | '',
-  repoId: 'R_kgDOVcQ0Wg',
-  category: 'Announcements',
-  categoryId: 'DIC_kwDOVcQ0Ws4DJ8om',
-};

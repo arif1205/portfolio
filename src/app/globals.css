@@ -216,8 +216,3 @@
     animation: none;
   }
 }
-
-giscus-widget {
-  display: block;
-  padding-block: calc(var(--spacing) * 4);
-}

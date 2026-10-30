@@ -9,12 +9,12 @@ The codebase is a **from-scratch Next.js build** written to match the live aelew
 | | Live aelew.com (reference) | This repo |
 |---|---|---|
 | Framework | Next.js on Vercel | Next.js 16 (App Router, `cacheComponents`), Tailwind CSS v4 |
-| Pages | home, projects, guestbook, default 404 | same |
+| Pages | home, projects, guestbook, default 404 | home, projects, **resume** (replaces guestbook; `/guestbook` 308-redirects), default 404 |
 | Font | Open Runde | Open Runde (OFL, from the official GitHub release) |
 | Nav and section icons | Nucleo Glass | Nucleo Glass (`nucleo-glass` npm package) |
 | Brand and tech icons | Simple Icons | Simple Icons, plus an inline LinkedIn glyph |
 | Mobile menu | Vaul drawer | Vaul drawer |
-| Guestbook | giscus (GitHub Discussions) | giscus, configured in `src/lib/data.ts` |
+| Guestbook | giscus (GitHub Discussions) | removed; `/resume` previews and downloads `public/static/files/md-ariful-islam-resume.pdf` |
 | Cursor cat | oneko | oneko.js adaptation (MIT, credited in `THIRD_PARTY_NOTICES.md`) |
 | Theme | dark by default; light/dark/system switcher | same (`next-themes`) |
 

@@ -15,10 +15,10 @@ Open http://localhost:3000.
 
 ## Customise
 
-- **Content:** `src/lib/data.ts` holds the profile, experience, involvements, projects, socials and giscus settings.
+- **Content:** `src/lib/data.ts` holds the profile, experience, certifications, projects, socials and resume link.
 - **Images:** replace the files in `src/assets/img/` (logos, project covers, hero render) and `public/static/img/background.jpg`.
 - **Avatar:** `src/components/avatar.tsx` and `src/app/icon.svg`.
-- **Guestbook:** uses [giscus](https://giscus.app). Install the giscus GitHub App on this repo for comments to load.
+- **Resume:** replace `public/static/files/md-ariful-islam-resume.pdf`; the `/resume` page previews and downloads it.
 
 ## Credits
 

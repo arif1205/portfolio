@@ -16,18 +16,20 @@ const variants = {
 type BeamButtonProps = {
   href: string;
   variant: keyof typeof variants;
+  // Saves the file under this name instead of navigating to it.
+  download?: string;
   beamStrength: number;
   className?: string;
   children: ReactNode;
 };
 
-export function BeamButton({ href, variant, beamStrength, className, children }: BeamButtonProps) {
-  const external = !href.startsWith('/');
+export function BeamButton({ href, variant, beamStrength, download, className, children }: BeamButtonProps) {
+  const external = !href.startsWith('/') || download !== undefined;
   const classes = cn(base, variants[variant]);
   return (
     <div className={cn('beam', className)} style={{ '--beam-strength': beamStrength } as CSSProperties}>
       {external ? (
-        <a href={href} className={classes}>
+        <a href={href} download={download} className={classes}>
           {children}
         </a>
       ) : (

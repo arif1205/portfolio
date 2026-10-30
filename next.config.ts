@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BUILD_TIME: String(Date.now()),
   },
   partialPrefetching: true,
+  async redirects() {
+    return [{ source: '/guestbook', destination: '/resume', permanent: true }];
+  },
   turbopack: {
     rules: {
       "*.css": {
