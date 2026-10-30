@@ -197,7 +197,7 @@ export const projects: Project[] = [
   {
     name: 'FluentCommunity',
     description: 'Community plugin at AuthLab',
-    href: 'https://wordpress.org/plugins/fluent-community/',
+    href: 'https://fluentcommunity.co/',
     cover: fluentCommunity,
     stack: [SiWordpress, SiPhp, SiVuedotjs, SiVite, SiMysql],
   },
