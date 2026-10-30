@@ -4,11 +4,13 @@ import {
   SiDrizzle,
   SiExpress,
   SiFastify,
-  SiMariadb,
   SiGooglemaps,
+  SiMariadb,
+  SiMysql,
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
+  SiPhp,
   SiPostgresql,
   SiPrisma,
   SiReact,
@@ -21,6 +23,9 @@ import {
   SiTailwindcss,
   SiTurborepo,
   SiTypescript,
+  SiVite,
+  SiVuedotjs,
+  SiWordpress,
 } from '@icons-pack/react-simple-icons';
 
 import authlabLogo from '@/assets/img/logos/authlab.png';
@@ -30,11 +35,14 @@ import kodekloudLogo from '@/assets/img/logos/kodekloud.png';
 import pressplyLogo from '@/assets/img/logos/pressply.png';
 import sustLogo from '@/assets/img/logos/sust.png';
 import brokenLinksFinder from '@/assets/img/projects/broken-links-finder.png';
+import bulkDeleteBackup from '@/assets/img/projects/bulk-delete-backup.png';
+import bulkPriceEditor from '@/assets/img/projects/bulk-price-editor.png';
 import customerInsights from '@/assets/img/projects/customer-insights.png';
 import duplicateFinder from '@/assets/img/projects/duplicate-finder.png';
 import easyCourierBd from '@/assets/img/projects/easy-courier-bd.png';
 import elora from '@/assets/img/projects/elora.png';
 import esign from '@/assets/img/projects/esign.png';
+import fluentCommunity from '@/assets/img/projects/fluent-community.jpg';
 import mysust from '@/assets/img/projects/mysust.png';
 import pocketcarer from '@/assets/img/projects/pocketcarer.png';
 import wishsupport from '@/assets/img/projects/wishsupport.png';
@@ -187,6 +195,13 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    name: 'FluentCommunity',
+    description: 'Community plugin at AuthLab',
+    href: 'https://wordpress.org/plugins/fluent-community/',
+    cover: fluentCommunity,
+    stack: [SiWordpress, SiPhp, SiVuedotjs, SiVite, SiMysql],
+  },
+  {
     name: 'MySUST',
     description: 'Portal for 17,000+ students',
     href: 'https://services.student.sust.edu',
@@ -221,6 +236,20 @@ export const projects: Project[] = [
     href: 'https://apps.shopify.com/rp-delete-duplicate-products',
     cover: duplicateFinder,
     stack: [SiRemix, SiShopify, SiPrisma, SiPostgresql],
+  },
+  {
+    name: 'RP: Bulk Price Editor',
+    description: 'Scheduled bulk discounts',
+    href: 'https://apps.shopify.com/rp-bulk-price-editor',
+    cover: bulkPriceEditor,
+    stack: [SiRemix, SiShopify, SiPrisma, SiMysql, SiRedis],
+  },
+  {
+    name: 'RP: Bulk Delete & Backup',
+    description: 'Bulk delete with restore',
+    href: 'https://apps.shopify.com/rapify-bulk-product-delete',
+    cover: bulkDeleteBackup,
+    stack: [SiReact, SiShopify, SiExpress, SiPrisma, SiMysql],
   },
 ];
 
