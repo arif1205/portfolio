@@ -29,7 +29,7 @@ export function MobileNav() {
           <div className="flex items-center justify-between pt-3 pb-4">
             <div className="flex items-center gap-2.25">
               <Avatar />
-              <p className="text-lg font-medium tracking-tighter lowercase">{profile.handle}</p>
+              <p className="text-lg font-medium tracking-tighter">{profile.handle}</p>
             </div>
             <ThemeSwitcher className="-mr-1" />
           </div>

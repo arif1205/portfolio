@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 // Letters drop in one by one on first load.
 export function SiteName({ name }: { name: string }) {
   return (
-    <p className="transform-gpu text-lg font-medium tracking-tighter whitespace-nowrap" aria-label={name}>
+    <p className="transform-gpu text-lg font-medium tracking-tighter whitespace-nowrap normal-case" aria-label={name}>
       {name.split('').map((letter, i) => (
         <motion.span
           key={i}

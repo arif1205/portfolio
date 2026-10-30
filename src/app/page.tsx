@@ -27,7 +27,7 @@ export default function Home() {
           <PageMarker />
           <div className="enter-animation max-w-100">
             <hgroup>
-              <h1 className="text-[1.375rem]/5 font-semibold tracking-tighter">{profile.name}</h1>
+              <h1 className="text-[1.375rem]/5 font-semibold tracking-tighter normal-case">{profile.name}</h1>
               <p className="text-muted-foreground/70 mt-1.5 mb-3.5 leading-4 font-medium tracking-tight">
                 {profile.tagline}
               </p>

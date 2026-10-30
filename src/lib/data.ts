@@ -40,7 +40,7 @@ import wishsupport from '@/assets/img/projects/wishsupport.png';
 type Icon = ComponentType<SVGProps<SVGSVGElement> & { title?: string }>;
 
 export const profile = {
-  handle: 'arif',
+  handle: 'Arif',
   name: 'Md. Ariful Islam',
   tagline: 'Software engineer, full-stack developer, SaaS builder',
   intro: 'Building SaaS, e-commerce and WordPress products.',
