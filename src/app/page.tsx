@@ -6,6 +6,7 @@ import { IconBadgeSparkle, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } 
 import { Arrow, BeamButton } from '@/components/button';
 import { Divider } from '@/components/divider';
 import { TorusKnot } from '@/components/torus-knot';
+import { YearsSince } from '@/components/years-since';
 import { LinkedInIcon, MailIcon } from '@/components/icons/brand';
 import { PageMarker } from '@/components/page-marker';
 import { ProjectCard } from '@/components/project-card';
@@ -39,7 +40,7 @@ export default function Home() {
               </p>
             </hgroup>
             <p className="text-muted-foreground mb-4 text-sm/5 text-pretty">
-              {profile.intro} Graduated in{' '}
+              <YearsSince from={profile.careerStart} /> {profile.intro} Graduated in{' '}
               <strong className="text-foreground/60 tracking-narrow font-medium">{profile.degree}</strong>{' '}
               <span className="mr-0.5">@</span>{' '}
               <a href={profile.university.href} target="_blank" rel="noreferrer" className="inline-flex items-baseline gap-1.25 whitespace-nowrap">

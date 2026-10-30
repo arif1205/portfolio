@@ -44,9 +44,11 @@ export const profile = {
   name: 'Md. Ariful Islam',
   // Shown as "role | pitch" on one line; phones stack the two parts instead.
   tagline: ['Software engineer', 'turning ideas into products'] as const,
-  intro: 'Building SaaS, e-commerce and WordPress products.',
+  // First professional role (Infancy IT); the hero shows whole years since then.
+  careerStart: '2023-05-01',
+  intro: 'years shipping SaaS, Shopify apps and plugins.',
   summary:
-    'Software engineer with 3.5+ years of experience building SaaS, e-commerce and WordPress products with TypeScript, React, Node.js and PostgreSQL.',
+    'Software engineer shipping SaaS, Shopify apps and WordPress plugins with TypeScript, React, Node.js and PostgreSQL.',
   degree: 'Computer Science',
   university: { name: 'SUST', href: 'https://www.sust.edu', logo: sustLogo },
   email: 'imdariful71@gmail.com',
