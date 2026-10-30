@@ -107,14 +107,8 @@
     @apply font-semibold;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  header,
-  hgroup {
+  /* Taglines and page subtitles stay lowercase as a style; nav and headings keep their written case. */
+  hgroup p {
     text-transform: lowercase;
   }
 

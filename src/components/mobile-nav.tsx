@@ -33,7 +33,7 @@ export function MobileNav() {
             </div>
             <ThemeSwitcher className="-mr-1" />
           </div>
-          <nav className="divide-border/60 bg-secondary/20 divide-y overflow-hidden rounded-lg border text-[0.9375rem] font-medium tracking-tight lowercase">
+          <nav className="divide-border/60 bg-secondary/20 divide-y overflow-hidden rounded-lg border text-[0.9375rem] font-medium tracking-tight">
             {navItems.map(({ href, label, icon: Icon }) => (
               <Link
                 key={href}

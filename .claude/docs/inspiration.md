@@ -45,7 +45,7 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
 
 - Card: `container-layout` is `max-width: 47.125rem` with 1rem inline padding. The header is sticky with a `rounded-t-xl` top border and backdrop blur, and an eased 15-stop black fade sits under it. The footer has a rounded bottom.
 - Section dividers: full-bleed 1px rules with crosshair marks at the card edges (`src/components/divider.tsx`).
-- Headings, `header` and `hgroup` are forced to lowercase in CSS; body copy is not.
+- The live site forces headings, `header` and `hgroup` to lowercase. Here only `hgroup p` (tagline, page subtitles) and buttons are lowercase; nav labels and headings keep their written (title) case at Arif's request.
 - Entrance: `.enter-animation` blurs and slides in over 0.7s, staggered 0/200/400/600/800ms. It is disabled under `prefers-reduced-motion`.
 - Hero visual: a 300×276 canvas, flush right, with `-my-18` so it spans the full hero height. A background-colour overlay fades out over 1s once the first frame draws. Drop shadows in light mode only. Hidden below 640px.
 - Project cards: aspect 61/32, a heavier gradient scrim than live (`from-black/25 via-black/70 to-black/95`) because these covers are text-heavy posters, tech icons, domain, and a zoom on hover (live also shows an amber star on featured cards; removed here at Arif's request) (1.02–1.05).
