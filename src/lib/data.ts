@@ -163,7 +163,7 @@ export const projects: Project[] = [
     hoverScale: 1.03,
   },
   {
-    name: 'Easy Courier BD',
+    name: 'WD: Easy Courier BD',
     description: 'One-click courier booking',
     href: 'https://apps.shopify.com/wd-easy-courier-bd',
     cover: easyCourierBd,
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     hoverScale: 1.03,
   },
   {
-    name: 'Customer Insights & Growth',
+    name: 'WD: Customer Insights & Growth',
     description: 'Shopify shopper analytics',
     href: 'https://apps.shopify.com/wd-customer-insights-growth',
     cover: customerInsights,
