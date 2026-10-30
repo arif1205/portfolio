@@ -1,4 +1,6 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
+import { ExternalLink } from 'lucide-react';
 
 import type { TimelineEntry } from '@/lib/data';
 import { cn } from '@/lib/utils';
@@ -49,11 +51,35 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
                 )}
               />
               <p className="opacity-80 sm:opacity-100">{entry.period}</p>
+              {entry.credentialUrl && (
+                <CredentialLink href={entry.credentialUrl} className="flex sm:hidden">
+                  <span aria-hidden="true">·</span>
+                </CredentialLink>
+              )}
             </div>
             {entry.location && <p className="hidden leading-none opacity-80 sm:block">{entry.location}</p>}
+            {entry.credentialUrl && <CredentialLink href={entry.credentialUrl} className="hidden sm:flex" />}
           </div>
         </li>
       ))}
     </ul>
+  );
+}
+
+function CredentialLink({ href, className, children }: { href: string; className?: string; children?: ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className={cn(
+        'hover:text-foreground/75 items-center gap-1 leading-none opacity-80 transition-colors hover:opacity-100',
+        className
+      )}
+    >
+      {children}
+      Show credential
+      <ExternalLink className="size-3" />
+    </a>
   );
 }

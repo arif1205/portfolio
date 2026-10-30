@@ -63,6 +63,7 @@ export type TimelineEntry = {
   logo: StaticImageData;
   period: string;
   location?: string;
+  credentialUrl?: string;
   current?: boolean;
   // Rounded corners suit square logos; leave off for logos that already have their own shape.
   rounded?: boolean;
@@ -119,6 +120,7 @@ export const certifications: TimelineEntry[] = [
     href: 'https://aws.amazon.com/training/awsacademy/',
     logo: awsLogo,
     period: 'Issued Sep 2024',
+    credentialUrl: 'https://www.credly.com/badges/ef65a22a-51ff-4e79-bba2-664728072271/linked_in_profile',
     rounded: true,
   },
   {
@@ -127,6 +129,7 @@ export const certifications: TimelineEntry[] = [
     href: 'https://aws.amazon.com/training/awsacademy/',
     logo: awsLogo,
     period: 'Issued Mar 2024',
+    credentialUrl: 'https://www.credly.com/badges/7ae4b8ce-c5e4-4c2f-842e-0703c59f6be0/linked_in_profile',
     rounded: true,
   },
   {
@@ -135,6 +138,7 @@ export const certifications: TimelineEntry[] = [
     href: 'https://kodekloud.com',
     logo: kodekloudLogo,
     period: 'Issued Feb 2024',
+    credentialUrl: 'https://kodekloud.com/certificate-verification/2DECCBCA2878-2DECC5D35D76-2DECC597182A/',
   },
 ];
 
