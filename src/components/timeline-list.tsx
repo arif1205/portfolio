@@ -35,7 +35,7 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
               <p className="font-medium tracking-tight text-pretty">{entry.title}</p>
               <p className="text-muted-foreground tracking-narrow sm:leading-none">
                 {entry.organization}
-                <span className="sm:hidden"> · {entry.location}</span>
+                {entry.location && <span className="sm:hidden"> · {entry.location}</span>}
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
               />
               <p className="opacity-80 sm:opacity-100">{entry.period}</p>
             </div>
-            <p className="hidden leading-none opacity-80 sm:block">{entry.location}</p>
+            {entry.location && <p className="hidden leading-none opacity-80 sm:block">{entry.location}</p>}
           </div>
         </li>
       ))}

@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import { SiGithub } from '@icons-pack/react-simple-icons';
-import { IconAwardCertificate, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } from 'nucleo-glass';
+import { IconAwardCertificate, IconBadgeSparkle, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } from 'nucleo-glass';
 
 import { Arrow, BeamButton } from '@/components/button';
 import { Divider } from '@/components/divider';
@@ -11,7 +11,7 @@ import { PageMarker } from '@/components/page-marker';
 import { ProjectCard } from '@/components/project-card';
 import { Section } from '@/components/section';
 import { TimelineList } from '@/components/timeline-list';
-import { education, experience, profile, projects } from '@/lib/data';
+import { certifications, education, experience, profile, projects } from '@/lib/data';
 
 const socialLinks = [
   { href: profile.socials.github, label: 'GitHub', icon: SiGithub },
@@ -76,11 +76,15 @@ export default function Home() {
         <TimelineList entries={education} />
       </Section>
       <Divider />
+      <Section id="certifications" title="Certifications" icon={IconBadgeSparkle} delay={600}>
+        <TimelineList entries={certifications} />
+      </Section>
+      <Divider />
       <Section
         id="projects"
         title="Projects"
         icon={IconFolder}
-        delay={600}
+        delay={800}
         action={
           <BeamButton href="/projects" variant="secondary" beamStrength={0.5}>
             View more
@@ -99,7 +103,7 @@ export default function Home() {
       <Divider />
       <section
         className="enter-animation grid gap-4 py-14 text-center"
-        style={{ '--enter-delay': '800ms' } as CSSProperties}
+        style={{ '--enter-delay': '1000ms' } as CSSProperties}
       >
         <h2 className="mx-auto flex flex-col text-[1.375rem]/5 font-semibold tracking-tighter [&>span>svg]:drop-shadow [&>span>svg]:drop-shadow-black/15 dark:[&>span>svg]:drop-shadow-none">
           <span className="mx-auto flex items-center gap-2.5 pr-3.5">

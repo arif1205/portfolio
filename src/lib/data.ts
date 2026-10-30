@@ -23,7 +23,9 @@ import {
 } from '@icons-pack/react-simple-icons';
 
 import authlabLogo from '@/assets/img/logos/authlab.png';
+import awsLogo from '@/assets/img/logos/aws.png';
 import infancyLogo from '@/assets/img/logos/infancy-it.png';
+import kodekloudLogo from '@/assets/img/logos/kodekloud.png';
 import pressplyLogo from '@/assets/img/logos/pressply.png';
 import sustLogo from '@/assets/img/logos/sust.png';
 import brokenLinksFinder from '@/assets/img/projects/broken-links-finder.png';
@@ -60,7 +62,7 @@ export type TimelineEntry = {
   href: string;
   logo: StaticImageData;
   period: string;
-  location: string;
+  location?: string;
   current?: boolean;
   // Rounded corners suit square logos; leave off for logos that already have their own shape.
   rounded?: boolean;
@@ -107,6 +109,32 @@ export const education: TimelineEntry[] = [
     logo: sustLogo,
     period: 'Feb 2020 – Jul 2025',
     location: 'Sylhet, Bangladesh',
+  },
+];
+
+export const certifications: TimelineEntry[] = [
+  {
+    title: 'AWS Academy Cloud Web Application Builder',
+    organization: 'Amazon Web Services (AWS)',
+    href: 'https://aws.amazon.com/training/awsacademy/',
+    logo: awsLogo,
+    period: 'Issued Sep 2024',
+    rounded: true,
+  },
+  {
+    title: 'AWS Academy Cloud Foundations',
+    organization: 'Amazon Web Services (AWS)',
+    href: 'https://aws.amazon.com/training/awsacademy/',
+    logo: awsLogo,
+    period: 'Issued Mar 2024',
+    rounded: true,
+  },
+  {
+    title: 'Docker Training Course for the Absolute Beginner',
+    organization: 'KodeKloud',
+    href: 'https://kodekloud.com',
+    logo: kodekloudLogo,
+    period: 'Issued Feb 2024',
   },
 ];
 
