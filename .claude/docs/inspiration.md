@@ -27,7 +27,7 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
   - `authlab.png`: AuthLab's site icon.
   - `sust.png`: from `mysust-server/public/images/sust_logo.png`.
   - `pressply.png`: Pressply's own mark (`pressply.com/media/pressply/pressply_mark.png`) on a white tile.
-  - `infancy-it.png`: a generated monogram, because infancyit.com was down.
+  - `infancy-it.png`: the Infancy IT "i" mark (supplied by Arif) on a square tile in its own background colour.
   - `aws.png`, `kodekloud.png`: the issuers' own site icons.
 - `src/assets/img/projects/`:
   - Shopify App Store listing screenshots for the Shopify apps.
