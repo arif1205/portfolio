@@ -44,7 +44,7 @@ export const profile = {
   name: 'Md. Ariful Islam',
   // Shown as "role | pitch" on one line; phones stack the two parts instead.
   tagline: ['Software engineer', 'turning ideas into products'] as const,
-  // First professional role (Infancy IT); the hero shows whole years since then.
+  // First professional role (Infancy IT); the hero shows years since then, in half-year steps.
   careerStart: '2023-05-01',
   intro: 'years shipping SaaS, Shopify apps and plugins.',
   summary:

@@ -3,20 +3,24 @@
 import { useSyncExternalStore } from 'react';
 
 const subscribe = () => () => {};
-const MS_PER_YEAR = 365.25 * 24 * 60 * 60 * 1000;
 // Inlined at build so the prerendered HTML has a sensible value before the browser takes over.
 const BUILD_TIME = Number(process.env.NEXT_PUBLIC_BUILD_TIME);
 
-function wholeYearsSince(from: string, now: number) {
-  return Math.max(0, Math.floor((now - Date.parse(from)) / MS_PER_YEAR));
+// Rounded down to the half year, so "3.5+" never overstates experience.
+function halfYearsSince(from: string, now: number) {
+  const start = new Date(from);
+  const end = new Date(now);
+  let months = (end.getUTCFullYear() - start.getUTCFullYear()) * 12 + end.getUTCMonth() - start.getUTCMonth();
+  if (end.getUTCDate() < start.getUTCDate()) months -= 1;
+  return Math.max(0, Math.floor(months / 6) / 2);
 }
 
-// Whole years since `from`, e.g. "3+", recomputed in the browser so it never goes stale between deploys.
+// Years since `from`, e.g. "3+" or "3.5+", recomputed in the browser so it never goes stale between deploys.
 export function YearsSince({ from }: { from: string }) {
   const years = useSyncExternalStore(
     subscribe,
-    () => wholeYearsSince(from, Date.now()),
-    () => wholeYearsSince(from, BUILD_TIME)
+    () => halfYearsSince(from, Date.now()),
+    () => halfYearsSince(from, BUILD_TIME)
   );
   return <>{years}+</>;
 }
