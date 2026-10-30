@@ -186,15 +186,15 @@ export const projects: Project[] = [
     hoverScale: 1.02,
   },
   {
-    name: 'MySUST & eSign',
+    name: 'MySUST',
     description: 'Portal for 17,000+ students',
     href: 'https://services.student.sust.edu',
     cover: mysust,
     stack: [SiNextdotjs, SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiPrisma],
   },
   {
-    name: 'PocketCarer v2',
-    description: 'Care business platform',
+    name: 'PocketCarer',
+    description: 'Carer business platform',
     href: 'https://app.pocketcarer.com',
     cover: pocketcarer,
     stack: [SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiGooglemaps],
