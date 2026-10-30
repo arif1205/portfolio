@@ -52,7 +52,7 @@ export const profile = {
   email: 'imdariful71@gmail.com',
   copyrightYear: 2026,
   socials: {
-    discord: 'arif120510',
+    discord: 'https://discord.com/users/849591438576713728',
     github: 'https://github.com/arif1205',
     linkedin: 'https://www.linkedin.com/in/arif1205/',
   },

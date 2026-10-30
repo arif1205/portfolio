@@ -4,7 +4,6 @@ import { SiDiscord, SiGithub } from '@icons-pack/react-simple-icons';
 import { IconBadgeSparkle, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } from 'nucleo-glass';
 
 import { Arrow, BeamButton } from '@/components/button';
-import { CopyHandle } from '@/components/copy-handle';
 import { Divider } from '@/components/divider';
 import { TorusKnot } from '@/components/torus-knot';
 import { LinkedInIcon, MailIcon } from '@/components/icons/brand';
@@ -15,6 +14,7 @@ import { TimelineList } from '@/components/timeline-list';
 import { certifications, experience, profile, projects } from '@/lib/data';
 
 const socialLinks = [
+  { href: profile.socials.discord, label: 'Discord', icon: SiDiscord },
   { href: profile.socials.github, label: 'GitHub', icon: SiGithub },
   { href: profile.socials.linkedin, label: 'LinkedIn', icon: LinkedInIcon },
   { href: `mailto:${profile.email}`, label: 'Email', icon: MailIcon },
@@ -56,9 +56,6 @@ export default function Home() {
               .
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <CopyHandle handle={profile.socials.discord} label="Discord">
-                <SiDiscord className="size-5" />
-              </CopyHandle>
               {socialLinks.map(({ href, label, icon: Icon }) => (
                 <a
                   key={label}
