@@ -96,6 +96,7 @@ export const experience: TimelineEntry[] = [
     period: 'Sep 2023 – Apr 2026',
     location: 'Remote',
     rounded: true,
+    invertInLight: true,
   },
 ];
 

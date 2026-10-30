@@ -26,13 +26,14 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
 - `src/assets/img/logos/`:
   - `authlab.png`: AuthLab's site icon.
   - `sust.png`: from `mysust-server/public/images/sust_logo.png`.
-  - `infancy-it.png`, `pressply.png`: generated monograms, because infancyit.com was down and pressply.com only has a default Vercel favicon.
+  - `pressply.png`: Pressply's own mark (`pressply.com/media/pressply/pressply_mark.png`) on a white tile.
+  - `infancy-it.png`: a generated monogram, because infancyit.com was down.
 - `src/assets/img/projects/`:
   - Shopify App Store listing screenshots for the Shopify apps.
   - The WishSupport OG image.
   - Live screenshots of ELORA, MySUST and PocketCarer.
+- Hero visual: `src/components/torus-knot.tsx` is a hand-written WebGL (2,3) torus knot with a procedural black-chrome shader. It auto-tumbles, can be dragged, pauses when off-screen or when the tab is hidden, and doesn't auto-spin under reduced motion. Live uses three.js with a matcap in an OffscreenCanvas worker. `hero-{dark,light}.png` remain as the no-WebGL fallback.
 - Still placeholders:
-  - `src/assets/img/hero-{dark,light}.png` (original trefoil knot)
   - `public/static/img/background.jpg`
   - `src/components/avatar.tsx` and `src/app/icon.svg` (avatar illustration)
 
@@ -42,7 +43,7 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
 - Section dividers: full-bleed 1px rules with crosshair marks at the card edges (`src/components/divider.tsx`).
 - Headings, `header` and `hgroup` are forced to lowercase in CSS; body copy is not.
 - Entrance: `.enter-animation` blurs and slides in over 0.7s, staggered 0/200/400/600/800ms. It is disabled under `prefers-reduced-motion`.
-- Hero visual: about 200px, vertically centred, 52px from the card's right padding. Hidden below 640px.
+- Hero visual: a 300×276 canvas, flush right, with `-my-18` so it spans the full hero height. A background-colour overlay fades out over 1s once the first frame draws. Drop shadows in light mode only. Hidden below 640px.
 - Project cards: aspect 61/32, gradient scrim, tech icons, domain, amber star for featured, and a zoom on hover (1.02–1.05).
 - Buttons: "view more" and "get in touch" have a slowly rotating beam border (`.beam` in `globals.css`).
 - The 404 is Next's built-in not-found page, which also sets a black background and zero body margin, as the live site does.

@@ -5,7 +5,7 @@ import { IconAwardCertificate, IconFolder, IconMsgs, IconPaperPlane, IconSuitcas
 
 import { Arrow, BeamButton } from '@/components/button';
 import { Divider } from '@/components/divider';
-import { HeroVisual } from '@/components/hero-visual';
+import { TorusKnot } from '@/components/torus-knot';
 import { LinkedInIcon, MailIcon } from '@/components/icons/brand';
 import { PageMarker } from '@/components/page-marker';
 import { ProjectCard } from '@/components/project-card';
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <HeroVisual />
+        <TorusKnot />
       </section>
       <Divider />
       <Section id="experience" title="Experience" icon={IconSuitcase} delay={200}>
