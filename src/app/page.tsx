@@ -9,7 +9,7 @@ import { TorusKnot } from '@/components/torus-knot';
 import { YearsSince } from '@/components/years-since';
 import { LinkedInIcon, MailIcon } from '@/components/icons/brand';
 import { PageMarker } from '@/components/page-marker';
-import { ProjectCard } from '@/components/project-card';
+import { ProjectGrid } from '@/components/project-grid';
 import { Section } from '@/components/section';
 import { TimelineList } from '@/components/timeline-list';
 import { certifications, experience, profile, projects } from '@/lib/data';
@@ -95,13 +95,8 @@ export default function Home() {
           </BeamButton>
         }
       >
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {projects
-            .filter((project) => project.featured)
-            .map((project) => (
-              <ProjectCard key={project.name} project={project} />
-            ))}
-        </div>
+        {/* -mb-4 cancels the section's bottom padding so the tiles meet the divider line. */}
+        <ProjectGrid projects={projects.filter((project) => project.featured)} className="-mb-4" />
       </Section>
       <Divider />
       <section

@@ -48,7 +48,7 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
 - The live site forces headings, `header` and `hgroup` to lowercase. Here only `hgroup p` (tagline, page subtitles) and buttons are lowercase; nav labels and headings keep their written (title) case at Arif's request.
 - Entrance: `.enter-animation` blurs and slides in over 0.7s, staggered 0/200/400/600/800ms. It is disabled under `prefers-reduced-motion`.
 - Hero visual: a 300×276 canvas, flush right, with `-my-18` so it spans the full hero height. A background-colour overlay fades out over 1s once the first frame draws. Drop shadows in light mode only. Hidden below 640px.
-- Project cards: aspect 61/32, a heavier gradient scrim than live (`from-black/25 via-black/70 to-black/95`) because these covers are text-heavy posters, tech icons, domain, and a zoom on hover (live also shows an amber star on featured cards; removed here at Arif's request) (1.02–1.05).
+- Project cards: deviates from live's rounded floating tiles. Here they form a square "blueprint" grid (`src/components/project-grid.tsx`): edge to edge across the card, 1px border-coloured gaps as lines, crosshairs at line intersections, and an odd last cell filled. Each tile is aspect 61/32, a heavier gradient scrim than live (`from-black/25 via-black/70 to-black/95`) because these covers are text-heavy posters, tech icons, domain, and a zoom on hover (live also shows an amber star on featured cards; removed here at Arif's request) (1.02–1.05).
 - Buttons: "view more" and "get in touch" have a slowly rotating beam border (`.beam` in `globals.css`).
 - The 404 is Next's built-in not-found page, which also sets a black background and zero body margin, as the live site does.
 

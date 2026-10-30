@@ -8,7 +8,7 @@ export function ProjectCard({ project, headingLevel: Heading = 'h3' }: { project
   const domain = new URL(project.href).hostname.replace(/^www\./, '');
 
   return (
-    <div className="group/project-card relative aspect-61/32 w-full overflow-hidden rounded-xl drop-shadow drop-shadow-black/25 focus-within:has-focus-visible:outline-2 focus-within:has-focus-visible:outline-offset-2 focus-within:has-focus-visible:outline-blue-500 dark:drop-shadow-none">
+    <div className="group/project-card bg-background relative aspect-61/32 w-full overflow-hidden focus-within:has-focus-visible:outline-2 focus-within:has-focus-visible:-outline-offset-2 focus-within:has-focus-visible:outline-blue-500">
       <Image
         src={project.cover}
         alt={`Project cover for ${project.name}`}
