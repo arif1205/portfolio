@@ -22,7 +22,7 @@ The codebase is a **from-scratch Next.js build** written to match the live aelew
 
 Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, background, hero render) is used.
 
-- `src/lib/data.ts` holds Arif's details from his resume (`~/Desktop/personal_details/resume/md-ariful-islam-29th-oct.pdf`, the general version). That covers the profile, AuthLab / Infancy IT / Pressply experience, SUST education (in place of the live site's "involvements" section), a Certifications section (two AWS Academy, one KodeKloud Docker, from LinkedIn), eight projects, and socials.
+- `src/lib/data.ts` holds Arif's details from his resume (`~/Desktop/personal_details/resume/md-ariful-islam-29th-oct.pdf`, the general version). That covers the profile, AuthLab / Infancy IT / Pressply experience, a Certifications section in the live site's "involvements" slot (an Education section was tried and then removed; SUST stays in the hero bio) (two AWS Academy, one KodeKloud Docker, from LinkedIn), eight projects, and socials.
 - `src/assets/img/logos/`:
   - `authlab.png`: AuthLab's site icon.
   - `sust.png`: from `mysust-server/public/images/sust_logo.png`.

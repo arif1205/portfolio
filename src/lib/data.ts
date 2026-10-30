@@ -104,17 +104,6 @@ export const experience: TimelineEntry[] = [
   },
 ];
 
-export const education: TimelineEntry[] = [
-  {
-    title: 'B.Sc. (Engg.) in Computer Science and Engineering',
-    organization: 'Shahjalal University of Science and Technology',
-    href: 'https://www.sust.edu',
-    logo: sustLogo,
-    period: 'Feb 2020 – Jul 2025',
-    location: 'Sylhet, Bangladesh',
-  },
-];
-
 export const certifications: TimelineEntry[] = [
   {
     title: 'AWS Academy Cloud Web Application Builder',
