@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { SiDiscord, SiGithub } from '@icons-pack/react-simple-icons';
-import { IconFolder, IconMsgs, IconPaperPlane, IconSuitcase, IconUsers } from 'nucleo-glass';
+import { SiGithub } from '@icons-pack/react-simple-icons';
+import { IconAwardCertificate, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } from 'nucleo-glass';
 
 import { Arrow, BeamButton } from '@/components/button';
 import { Divider } from '@/components/divider';
@@ -11,10 +11,9 @@ import { PageMarker } from '@/components/page-marker';
 import { ProjectCard } from '@/components/project-card';
 import { Section } from '@/components/section';
 import { TimelineList } from '@/components/timeline-list';
-import { experience, involvements, profile, projects } from '@/lib/data';
+import { education, experience, profile, projects } from '@/lib/data';
 
 const socialLinks = [
-  { href: profile.socials.discord, label: 'Discord', icon: SiDiscord },
   { href: profile.socials.github, label: 'GitHub', icon: SiGithub },
   { href: profile.socials.linkedin, label: 'LinkedIn', icon: LinkedInIcon },
   { href: `mailto:${profile.email}`, label: 'Email', icon: MailIcon },
@@ -34,19 +33,19 @@ export default function Home() {
               </p>
             </hgroup>
             <p className="text-muted-foreground mb-4 text-sm/5 text-pretty">
-              Full-time developer with a knack for building software. Currently studying{' '}
-              <strong className="text-foreground/60 tracking-narrow font-medium">{profile.role}</strong>{' '}
+              {profile.intro} Graduated in{' '}
+              <strong className="text-foreground/60 tracking-narrow font-medium">{profile.degree}</strong>{' '}
               <span className="mr-0.5">@</span>{' '}
-              <a href={profile.organization.href} target="_blank" rel="noreferrer" className="inline-flex items-baseline gap-1.25 whitespace-nowrap">
+              <a href={profile.university.href} target="_blank" rel="noreferrer" className="inline-flex items-baseline gap-1.25 whitespace-nowrap">
                 <Image
-                  src={profile.organization.logo}
+                  src={profile.university.logo}
                   alt=""
                   width={16}
                   height={16}
                   priority
-                  className="mt-px self-center rounded border border-white/50 object-contain dark:border-white/10"
+                  className="mt-px size-4 self-center object-contain"
                 />
-                <strong className="text-foreground/60 tracking-narrow font-medium">{profile.organization.name}</strong>
+                <strong className="text-foreground/60 tracking-narrow font-medium">{profile.university.name}</strong>
               </a>
               .
             </p>
@@ -73,8 +72,8 @@ export default function Home() {
         <TimelineList entries={experience} />
       </Section>
       <Divider />
-      <Section id="involvements" title="Involvements" icon={IconUsers} delay={400}>
-        <TimelineList entries={involvements} />
+      <Section id="education" title="Education" icon={IconAwardCertificate} delay={400}>
+        <TimelineList entries={education} />
       </Section>
       <Divider />
       <Section

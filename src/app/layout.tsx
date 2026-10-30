@@ -23,7 +23,7 @@ const openRunde = localFont({
 
 export const metadata: Metadata = {
   title: { default: profile.name, template: `%s | ${profile.name}` },
-  description: `${profile.name}: ${profile.tagline.toLowerCase()}.`,
+  description: profile.summary,
 };
 
 export const viewport: Viewport = {

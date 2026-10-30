@@ -18,16 +18,23 @@ The codebase is a **from-scratch Next.js build** written to match the live aelew
 | Cursor cat | oneko | oneko.js adaptation (MIT, credited in `THIRD_PARTY_NOTICES.md`) |
 | Theme | dark by default; light/dark/system switcher | same (`next-themes`) |
 
-## What is placeholder (replace with your own)
+## Content
 
-All content and imagery are original placeholders. Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, background, hero render) was copied.
+Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, background, hero render) is used.
 
-- `src/lib/data.ts`: profile, experience, involvements, projects, socials, giscus IDs.
-- `src/assets/img/logos/*`: monogram tiles generated for this repo.
-- `src/assets/img/projects/*`: generated cover art.
-- `src/assets/img/hero-{dark,light}.png`: an original trefoil-knot render (silver in dark mode, black chrome in light mode).
-- `public/static/img/background.jpg`: generated blurred-streak backdrop, shown at 15% opacity in dark mode only.
-- `src/components/avatar.tsx` and `src/app/icon.svg`: a placeholder avatar illustration.
+- `src/lib/data.ts` holds Arif's details from his resume (`~/Desktop/personal_details/resume/md-ariful-islam-29th-oct.pdf`, the general version). That covers the profile, AuthLab / Infancy IT / Pressply experience, SUST education (it replaces the live site's "involvements" section), eight projects, and socials.
+- `src/assets/img/logos/`:
+  - `authlab.png`: AuthLab's site icon.
+  - `sust.png`: from `mysust-server/public/images/sust_logo.png`.
+  - `infancy-it.png`, `pressply.png`: generated monograms, because infancyit.com was down and pressply.com only has a default Vercel favicon.
+- `src/assets/img/projects/`:
+  - Shopify App Store listing screenshots for the Shopify apps.
+  - The WishSupport OG image.
+  - Live screenshots of ELORA, MySUST and PocketCarer.
+- Still placeholders:
+  - `src/assets/img/hero-{dark,light}.png` (original trefoil knot)
+  - `public/static/img/background.jpg`
+  - `src/components/avatar.tsx` and `src/app/icon.svg` (avatar illustration)
 
 ## Design notes (measured from the live site)
 

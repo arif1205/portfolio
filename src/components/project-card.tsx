@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ExternalLink, Star } from 'lucide-react';
 
 import type { Project } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 export function ProjectCard({ project, headingLevel: Heading = 'h3' }: { project: Project; headingLevel?: 'h2' | 'h3' }) {
   const domain = new URL(project.href).hostname.replace(/^www\./, '');
@@ -17,7 +18,12 @@ export function ProjectCard({ project, headingLevel: Heading = 'h3' }: { project
         className="absolute inset-0 size-full scale-(--inactive-scale) object-cover saturate-[1.1] transition-[filter,scale] duration-300 [--inactive-scale:1] group-focus-within/project-card:scale-(--active-scale) group-hover/project-card:scale-(--active-scale)"
         style={{ '--active-scale': project.hoverScale ?? 1.05 } as CSSProperties}
       />
-      <div className="pointer-events-none absolute size-full bg-linear-to-b from-transparent via-black/20 to-black/60" />
+      <div
+        className={cn(
+          'pointer-events-none absolute size-full bg-linear-to-b from-transparent',
+          project.strongScrim ? 'via-black/45 via-45% to-black/85' : 'via-black/20 to-black/60'
+        )}
+      />
       <div className="absolute bottom-0 left-0 w-full">
         <div className="flex w-full flex-col items-start gap-px px-4 py-3 text-zinc-100 drop-shadow drop-shadow-black/25">
           <div className="flex w-full justify-between">

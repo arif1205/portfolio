@@ -1,59 +1,56 @@
 import type { StaticImageData } from 'next/image';
 import type { ComponentType, SVGProps } from 'react';
 import {
-  SiBun,
-  SiDiscord,
-  SiDocker,
   SiDrizzle,
-  SiElectron,
-  SiGo,
+  SiExpress,
+  SiFastify,
+  SiGooglemaps,
+  SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
   SiPrisma,
-  SiPython,
-  SiRaycast,
   SiReact,
-  SiSqlite,
-  SiSvelte,
+  SiReactquery,
+  SiReactrouter,
+  SiRedis,
+  SiRedux,
+  SiRemix,
+  SiShopify,
   SiTailwindcss,
+  SiTurborepo,
   SiTypescript,
 } from '@icons-pack/react-simple-icons';
 
-import company1 from '@/assets/img/logos/company-1.png';
-import company2 from '@/assets/img/logos/company-2.png';
-import company3 from '@/assets/img/logos/company-3.png';
-import company4 from '@/assets/img/logos/company-4.png';
-import org1 from '@/assets/img/logos/org-1.png';
-import org2 from '@/assets/img/logos/org-2.png';
-import org3 from '@/assets/img/logos/org-3.png';
-import universityLogo from '@/assets/img/logos/university.png';
-import atlas from '@/assets/img/projects/atlas.png';
-import beacon from '@/assets/img/projects/beacon.png';
-import courier from '@/assets/img/projects/courier.png';
-import ledger from '@/assets/img/projects/ledger.png';
-import lexicon from '@/assets/img/projects/lexicon.png';
-import nebula from '@/assets/img/projects/nebula.png';
-import orbit from '@/assets/img/projects/orbit.png';
-import prism from '@/assets/img/projects/prism.png';
-import relay from '@/assets/img/projects/relay.png';
-import splice from '@/assets/img/projects/splice.png';
+import authlabLogo from '@/assets/img/logos/authlab.png';
+import infancyLogo from '@/assets/img/logos/infancy-it.png';
+import pressplyLogo from '@/assets/img/logos/pressply.png';
+import sustLogo from '@/assets/img/logos/sust.png';
+import brokenLinksFinder from '@/assets/img/projects/broken-links-finder.png';
+import customerInsights from '@/assets/img/projects/customer-insights.png';
+import duplicateFinder from '@/assets/img/projects/duplicate-finder.png';
+import easyCourierBd from '@/assets/img/projects/easy-courier-bd.png';
+import elora from '@/assets/img/projects/elora.png';
+import mysust from '@/assets/img/projects/mysust.png';
+import pocketcarer from '@/assets/img/projects/pocketcarer.png';
+import wishsupport from '@/assets/img/projects/wishsupport.png';
 
 type Icon = ComponentType<SVGProps<SVGSVGElement> & { title?: string }>;
 
-// Placeholder content: replace with your own details, logos and project covers.
 export const profile = {
   handle: 'arif',
   name: 'Md. Ariful Islam',
-  tagline: 'Developer, tinkerer, software engineer',
-  role: 'Computer Science',
-  organization: { name: 'Your University', href: 'https://example.com', logo: universityLogo },
+  tagline: 'Software engineer, full-stack developer, SaaS builder',
+  intro: 'Building SaaS, e-commerce and WordPress products.',
+  summary:
+    'Software engineer with 3.5+ years of experience building SaaS, e-commerce and WordPress products with TypeScript, React, Node.js and PostgreSQL.',
+  degree: 'Computer Science',
+  university: { name: 'SUST', href: 'https://www.sust.edu', logo: sustLogo },
   email: 'imdariful71@gmail.com',
   copyrightYear: 2026,
   socials: {
-    discord: 'https://discord.com',
     github: 'https://github.com/arif1205',
-    linkedin: 'https://www.linkedin.com',
+    linkedin: 'https://www.linkedin.com/in/arif1205/',
   },
 };
 
@@ -72,71 +69,44 @@ export type TimelineEntry = {
 
 export const experience: TimelineEntry[] = [
   {
-    title: 'Software Engineer Intern',
-    organization: 'Acme Corporation',
-    href: 'https://example.com',
-    logo: company1,
-    period: 'Jun 2026 – Sep 2026',
-    location: 'Dhaka, BD',
-    rounded: true,
-  },
-  {
-    title: 'Software Engineer Intern',
-    organization: 'Globex',
-    href: 'https://example.com',
-    logo: company2,
-    period: 'May 2025 – Aug 2025',
-    location: 'Sylhet, BD',
+    title: 'Software Engineer (L-2)',
+    organization: 'AuthLab',
+    href: 'https://authlab.io',
+    logo: authlabLogo,
+    period: 'Feb 2026 – Present',
+    location: 'Sylhet, Bangladesh',
+    current: true,
     rounded: true,
     invertInLight: true,
   },
   {
-    title: 'Student Developer, Enterprise Application Services',
-    organization: 'Initech',
-    href: 'https://example.com',
-    logo: company3,
-    period: 'Aug 2024 – May 2025',
-    location: 'Remote',
+    title: 'Jr. Software Engineer',
+    organization: 'Infancy IT',
+    href: 'https://apps.shopify.com/partners/infancyit',
+    logo: infancyLogo,
+    period: 'May 2023 – Feb 2026',
+    location: 'Sylhet, Bangladesh',
+    rounded: true,
   },
   {
-    title: 'Software Engineer Intern',
-    organization: 'Umbrella Labs',
-    href: 'https://example.com',
-    logo: company4,
-    period: 'Feb 2024 – Apr 2024',
+    title: 'Frontend Developer',
+    organization: 'Pressply LLC',
+    href: 'https://pressply.com',
+    logo: pressplyLogo,
+    period: 'Sep 2023 – Apr 2026',
     location: 'Remote',
     rounded: true,
   },
 ];
 
-export const involvements: TimelineEntry[] = [
+export const education: TimelineEntry[] = [
   {
-    title: 'Social Media Chair',
-    organization: 'Computer Club at Your University',
-    href: 'https://example.com',
-    logo: org1,
-    period: 'May 2026 – Present',
-    location: 'Sylhet, BD',
-    current: true,
-    rounded: true,
-  },
-  {
-    title: 'Mentor, Hack School/Projects',
-    organization: 'Developers Society',
-    href: 'https://example.com',
-    logo: org2,
-    period: 'Sep 2025 – Apr 2026',
-    location: 'Sylhet, BD',
-    rounded: true,
-  },
-  {
-    title: 'Event Organizer, Engineering/Logistics',
-    organization: 'Hackathon Club',
-    href: 'https://example.com',
-    logo: org3,
-    period: 'Jul 2024 – May 2025',
-    location: 'Dhaka, BD',
-    rounded: true,
+    title: 'B.Sc. (Engg.) in Computer Science and Engineering',
+    organization: 'Shahjalal University of Science and Technology',
+    href: 'https://www.sust.edu',
+    logo: sustLogo,
+    period: 'Feb 2020 – Jul 2025',
+    location: 'Sylhet, Bangladesh',
   },
 ];
 
@@ -149,84 +119,79 @@ export type Project = {
   featured?: boolean;
   // How far the cover zooms on hover; busier covers look better with less.
   hoverScale?: number;
+  // Darker scrim keeps the title readable over light or text-heavy covers.
+  strongScrim?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    name: 'Nebula',
-    description: 'Plan group meetups smarter',
-    href: 'https://example.com',
-    cover: nebula,
-    stack: [SiDrizzle, SiSvelte, SiBun, SiSqlite, SiTypescript],
-    featured: true,
-    hoverScale: 1.02,
-  },
-  {
-    name: 'Ledger',
-    description: 'TX confirmation monitor',
-    href: 'https://github.com/arif1205',
-    cover: ledger,
-    stack: [SiDiscord, SiPython, SiPostgresql, SiDocker, SiTypescript],
+    name: 'WishSupport',
+    description: 'One inbox for Shopify apps',
+    href: 'https://wishsupport.app',
+    cover: wishsupport,
+    stack: [SiNestjs, SiNextdotjs, SiReact, SiPostgresql, SiDrizzle, SiTurborepo],
+    strongScrim: true,
     featured: true,
     hoverScale: 1.03,
   },
   {
-    name: 'Lexicon',
-    description: 'Curated developer dictionary',
-    href: 'https://example.com',
-    cover: lexicon,
-    stack: [SiDrizzle, SiPrisma, SiTailwindcss, SiReact, SiNextdotjs, SiTypescript],
+    name: 'Easy Courier BD',
+    description: 'One-click courier booking',
+    href: 'https://apps.shopify.com/wd-easy-courier-bd',
+    cover: easyCourierBd,
+    stack: [SiRemix, SiShopify, SiPrisma, SiPostgresql, SiRedis],
+    strongScrim: true,
+    featured: true,
+    hoverScale: 1.03,
+  },
+  {
+    name: 'Customer Insights & Growth',
+    description: 'Shopify shopper analytics',
+    href: 'https://apps.shopify.com/wd-customer-insights-growth',
+    cover: customerInsights,
+    stack: [SiReactrouter, SiFastify, SiPrisma, SiPostgresql, SiRedis],
+    strongScrim: true,
     featured: true,
   },
   {
-    name: 'Relay for Raycast',
-    description: 'Media downloader extension',
-    href: 'https://example.com',
-    cover: relay,
-    stack: [SiReact, SiRaycast, SiTypescript],
+    name: 'ELORA Perfumes',
+    description: 'E-commerce store & admin',
+    href: 'https://eloraperfumes.com',
+    cover: elora,
+    stack: [SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiPrisma, SiRedis],
     featured: true,
+    hoverScale: 1.02,
   },
   {
-    name: 'Courier',
-    description: 'Modern desktop email client',
-    href: 'https://example.com',
-    cover: courier,
-    stack: [SiReact, SiElectron, SiNodedotjs, SiDocker, SiNextdotjs, SiTypescript],
+    name: 'MySUST & eSign',
+    description: 'Portal for 17,000+ students',
+    href: 'https://services.student.sust.edu',
+    cover: mysust,
+    stack: [SiNextdotjs, SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiPrisma],
   },
   {
-    name: 'Beacon',
-    description: 'Job listing monitoring bot',
-    href: 'https://github.com/arif1205',
-    cover: beacon,
-    stack: [SiDiscord, SiDocker, SiGo, SiTypescript],
+    name: 'PocketCarer v2',
+    description: 'Care business platform',
+    href: 'https://app.pocketcarer.com',
+    cover: pocketcarer,
+    stack: [SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiGooglemaps],
+    strongScrim: true,
   },
   {
-    name: 'Atlas',
-    description: 'Domain, IP, & email OSINT tool',
-    href: 'https://example.com',
-    cover: atlas,
-    stack: [SiTailwindcss, SiReact, SiGo, SiDocker, SiPython, SiTypescript],
+    name: 'Broken Links Finder',
+    description: 'Catch & fix broken links',
+    href: 'https://apps.shopify.com/wd-broken-links-finder',
+    cover: brokenLinksFinder,
+    stack: [SiReactrouter, SiPrisma, SiPostgresql, SiReactquery, SiTailwindcss],
+    strongScrim: true,
   },
   {
-    name: 'Orbit Calendar Tool',
-    description: 'Generates .ics course calendars',
-    href: 'https://example.com',
-    cover: orbit,
-    stack: [SiTailwindcss, SiReact, SiNextdotjs, SiTypescript],
-  },
-  {
-    name: 'Prism',
-    description: 'AI app icon generator & API',
-    href: 'https://example.com',
-    cover: prism,
-    stack: [SiDrizzle, SiTailwindcss, SiReact, SiDocker, SiNextdotjs, SiTypescript],
-  },
-  {
-    name: 'Splice',
-    description: 'Automatic clip splitter & merger',
-    href: 'https://github.com/arif1205',
-    cover: splice,
-    stack: [SiPython, SiDocker],
+    name: 'Duplicate Finder & Delete',
+    description: 'Removed 5,00,000+ duplicates',
+    href: 'https://apps.shopify.com/rp-delete-duplicate-products',
+    cover: duplicateFinder,
+    stack: [SiRemix, SiShopify, SiPrisma, SiPostgresql],
+    strongScrim: true,
   },
 ];
 
