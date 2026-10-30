@@ -144,8 +144,6 @@ export type Project = {
   featured?: boolean;
   // How far the cover zooms on hover; busier covers look better with less.
   hoverScale?: number;
-  // Darker scrim keeps the title readable over light or text-heavy covers.
-  strongScrim?: boolean;
   // CSS object-position for covers whose aspect ratio differs from the card's.
   coverPosition?: string;
 };
@@ -157,7 +155,6 @@ export const projects: Project[] = [
     href: 'https://wishsupport.app',
     cover: wishsupport,
     stack: [SiNestjs, SiNextdotjs, SiReact, SiPostgresql, SiDrizzle, SiTurborepo],
-    strongScrim: true,
     coverPosition: '50% 30%',
     featured: true,
     hoverScale: 1.03,
@@ -168,7 +165,6 @@ export const projects: Project[] = [
     href: 'https://apps.shopify.com/wd-easy-courier-bd',
     cover: easyCourierBd,
     stack: [SiRemix, SiShopify, SiPrisma, SiPostgresql, SiRedis],
-    strongScrim: true,
     featured: true,
     hoverScale: 1.03,
   },
@@ -178,7 +174,6 @@ export const projects: Project[] = [
     href: 'https://apps.shopify.com/wd-customer-insights-growth',
     cover: customerInsights,
     stack: [SiReactrouter, SiFastify, SiPrisma, SiPostgresql, SiRedis],
-    strongScrim: true,
     featured: true,
   },
   {
@@ -203,7 +198,6 @@ export const projects: Project[] = [
     href: 'https://app.pocketcarer.com',
     cover: pocketcarer,
     stack: [SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiGooglemaps],
-    strongScrim: true,
   },
   {
     name: 'Broken Links Finder',
@@ -211,7 +205,6 @@ export const projects: Project[] = [
     href: 'https://apps.shopify.com/wd-broken-links-finder',
     cover: brokenLinksFinder,
     stack: [SiReactrouter, SiPrisma, SiPostgresql, SiReactquery, SiTailwindcss],
-    strongScrim: true,
   },
   {
     name: 'Duplicate Finder & Delete',
@@ -219,7 +212,6 @@ export const projects: Project[] = [
     href: 'https://apps.shopify.com/rp-delete-duplicate-products',
     cover: duplicateFinder,
     stack: [SiRemix, SiShopify, SiPrisma, SiPostgresql],
-    strongScrim: true,
   },
 ];
 
