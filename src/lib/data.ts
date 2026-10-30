@@ -75,7 +75,6 @@ export const experience: TimelineEntry[] = [
     logo: authlabLogo,
     period: 'Feb 2026 – Present',
     location: 'Sylhet, Bangladesh',
-    current: true,
     rounded: true,
     invertInLight: true,
   },
