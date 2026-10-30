@@ -146,6 +146,8 @@ export type Project = {
   hoverScale?: number;
   // Darker scrim keeps the title readable over light or text-heavy covers.
   strongScrim?: boolean;
+  // CSS object-position for covers whose aspect ratio differs from the card's.
+  coverPosition?: string;
 };
 
 export const projects: Project[] = [
@@ -156,6 +158,7 @@ export const projects: Project[] = [
     cover: wishsupport,
     stack: [SiNestjs, SiNextdotjs, SiReact, SiPostgresql, SiDrizzle, SiTurborepo],
     strongScrim: true,
+    coverPosition: '50% 30%',
     featured: true,
     hoverScale: 1.03,
   },

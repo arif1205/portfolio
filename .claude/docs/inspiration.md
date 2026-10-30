@@ -31,7 +31,7 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
   - `aws.png`, `kodekloud.png`: the issuers' own site icons.
 - `src/assets/img/projects/`:
   - Shopify App Store listing screenshots for the Shopify apps.
-  - The WishSupport OG image.
+  - WishSupport: Arif's 1080×1080 Facebook promo graphic, cropped at `coverPosition: '50% 30%'`.
   - Live screenshots of ELORA, MySUST and PocketCarer.
 - Hero visual: `src/components/torus-knot.tsx` is a hand-written WebGL (2,3) torus knot with a procedural black-chrome shader. It auto-tumbles, can be dragged, pauses when off-screen or when the tab is hidden, and doesn't auto-spin under reduced motion. Live uses three.js with a matcap in an OffscreenCanvas worker. `hero-{dark,light}.png` remain as the no-WebGL fallback.
 - Still placeholders:
@@ -45,7 +45,7 @@ Nothing personal of Andre's (name, bio, jobs, logos, screenshots, avatar, backgr
 - Headings, `header` and `hgroup` are forced to lowercase in CSS; body copy is not.
 - Entrance: `.enter-animation` blurs and slides in over 0.7s, staggered 0/200/400/600/800ms. It is disabled under `prefers-reduced-motion`.
 - Hero visual: a 300×276 canvas, flush right, with `-my-18` so it spans the full hero height. A background-colour overlay fades out over 1s once the first frame draws. Drop shadows in light mode only. Hidden below 640px.
-- Project cards: aspect 61/32, gradient scrim, tech icons, domain, amber star for featured, and a zoom on hover (1.02–1.05).
+- Project cards: aspect 61/32, gradient scrim, tech icons, domain, and a zoom on hover (live also shows an amber star on featured cards; removed here at Arif's request) (1.02–1.05).
 - Buttons: "view more" and "get in touch" have a slowly rotating beam border (`.beam` in `globals.css`).
 - The 404 is Next's built-in not-found page, which also sets a black background and zero body margin, as the live site does.
 

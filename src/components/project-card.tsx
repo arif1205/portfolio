@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { ExternalLink, Star } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 import type { Project } from '@/lib/data';
 import { cn } from '@/lib/utils';
@@ -16,7 +16,7 @@ export function ProjectCard({ project, headingLevel: Heading = 'h3' }: { project
         placeholder="blur"
         sizes="(min-width: 640px) 352px, 100vw"
         className="absolute inset-0 size-full scale-(--inactive-scale) object-cover saturate-[1.1] transition-[filter,scale] duration-300 [--inactive-scale:1] group-focus-within/project-card:scale-(--active-scale) group-hover/project-card:scale-(--active-scale)"
-        style={{ '--active-scale': project.hoverScale ?? 1.05 } as CSSProperties}
+        style={{ '--active-scale': project.hoverScale ?? 1.05, objectPosition: project.coverPosition } as CSSProperties}
       />
       <div
         className={cn(
@@ -50,9 +50,6 @@ export function ProjectCard({ project, headingLevel: Heading = 'h3' }: { project
         aria-label={`Open ${project.name}`}
         className="after:absolute after:inset-0"
       />
-      {project.featured && (
-        <Star className="absolute top-3 right-3 size-4 fill-current text-amber-500 opacity-90 drop-shadow drop-shadow-black/50" />
-      )}
     </div>
   );
 }
