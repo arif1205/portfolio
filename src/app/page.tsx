@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { SiDiscord, SiGithub } from '@icons-pack/react-simple-icons';
+import { SiDiscord, SiGithub, SiWhatsapp } from '@icons-pack/react-simple-icons';
 import { IconBadgeSparkle, IconFolder, IconMsgs, IconPaperPlane, IconSuitcase } from 'nucleo-glass';
 
 import { Arrow, BeamButton } from '@/components/button';
@@ -114,14 +114,20 @@ export default function Home() {
             Want to chat?
           </span>
           <span className="flex items-center gap-2.5">
-            Shoot me an email!
+            Shoot me a message!
             <IconPaperPlane uniqueId="cta-plane" />
           </span>
         </h2>
-        <BeamButton href={`mailto:${profile.email}`} variant="primary" beamStrength={1} className="mx-auto">
-          Get in touch
-          <Arrow className="-mr-0.5" />
-        </BeamButton>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <BeamButton href={`mailto:${profile.email}`} variant="primary" beamStrength={1}>
+            <MailIcon className="size-4" />
+            Mail me
+          </BeamButton>
+          <BeamButton href={profile.whatsapp} variant="secondary" size="lg" beamStrength={0.5} newTab>
+            <SiWhatsapp className="size-4" />
+            DM me
+          </BeamButton>
+        </div>
       </section>
     </>
   );

@@ -62,6 +62,7 @@ export const profile = {
   degree: 'Computer Science',
   university: { name: 'SUST', href: 'https://www.sust.edu', logo: sustLogo },
   email: 'imdariful71@gmail.com',
+  whatsapp: 'https://wa.me/8801875623238',
   resume: {
     href: '/static/files/md-ariful-islam-resume.pdf',
     fileName: 'Md-Ariful-Islam-Resume.pdf',

@@ -15,6 +15,7 @@ const variants = {
 const sizes = {
   sm: 'h-7 px-3 text-xs',
   md: 'h-8 px-3.5 text-sm',
+  lg: 'h-9 px-4 text-sm',
 };
 
 type BeamButtonProps = {
@@ -24,18 +25,25 @@ type BeamButtonProps = {
   size?: keyof typeof sizes;
   // Saves the file under this name instead of navigating to it.
   download?: string;
+  newTab?: boolean;
   beamStrength: number;
   className?: string;
   children: ReactNode;
 };
 
-export function BeamButton({ href, variant, beamStrength, size = 'sm', download, className, children }: BeamButtonProps) {
+export function BeamButton({ href, variant, beamStrength, size = 'sm', download, newTab, className, children }: BeamButtonProps) {
   const external = !href.startsWith('/') || download !== undefined;
   const classes = cn(base, variants[variant], variant === 'secondary' && sizes[size]);
   return (
     <div className={cn('beam', className)} style={{ '--beam-strength': beamStrength } as CSSProperties}>
       {external ? (
-        <a href={href} download={download} className={classes}>
+        <a
+          href={href}
+          download={download}
+          target={newTab ? '_blank' : undefined}
+          rel={newTab ? 'noreferrer' : undefined}
+          className={classes}
+        >
           {children}
         </a>
       ) : (
