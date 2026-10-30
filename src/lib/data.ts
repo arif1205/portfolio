@@ -42,7 +42,8 @@ type Icon = ComponentType<SVGProps<SVGSVGElement> & { title?: string }>;
 export const profile = {
   handle: 'Arif',
   name: 'Md. Ariful Islam',
-  tagline: 'Software engineer helping founders ship products',
+  // Shown as "role | pitch" on one line; phones stack the two parts instead.
+  tagline: ['Software engineer', 'turning ideas into products'] as const,
   intro: 'Building SaaS, e-commerce and WordPress products.',
   summary:
     'Software engineer with 3.5+ years of experience building SaaS, e-commerce and WordPress products with TypeScript, React, Node.js and PostgreSQL.',

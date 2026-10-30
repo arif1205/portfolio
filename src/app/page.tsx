@@ -29,7 +29,12 @@ export default function Home() {
             <hgroup>
               <h1 className="text-[1.375rem]/5 font-semibold tracking-tighter normal-case">{profile.name}</h1>
               <p className="text-muted-foreground/70 mt-1.5 mb-3.5 leading-4 font-medium tracking-tight text-balance">
-                {profile.tagline}
+                {profile.tagline[0]}
+                <span aria-hidden="true" className="max-sm:hidden">
+                  {' | '}
+                </span>
+                <br className="sm:hidden" />
+                {profile.tagline[1]}
               </p>
             </hgroup>
             <p className="text-muted-foreground mb-4 text-sm/5 text-pretty">
